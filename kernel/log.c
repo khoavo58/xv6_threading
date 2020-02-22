@@ -9,7 +9,7 @@
 
 // Simple logging that allows concurrent FS system calls.
 //
-// A log transaction contains the updates of multiple FS system
+// A log transaction contains the updates of multiple FS system 
 // calls. The logging system only commits when there are
 // no FS system calls active. Thus there is never
 // any reasoning required about whether a commit might
