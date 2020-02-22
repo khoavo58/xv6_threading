@@ -1,4 +1,4 @@
-// 
+//  
 // formatted console output -- printf, panic.
 //
 
