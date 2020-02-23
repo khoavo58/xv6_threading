@@ -14,6 +14,7 @@
 //     so do not keep them longer than necessary.
 
 
+
 #include "types.h"
 #include "param.h"
 #include "spinlock.h"
@@ -26,6 +27,7 @@
 struct {
   struct spinlock lock;
   struct buf buf[NBUF];
+
 
   // Linked list of all buffers, through prev/next.
   // head.next is most recently used.

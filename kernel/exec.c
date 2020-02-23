@@ -7,6 +7,7 @@
 #include "defs.h"
 #include "elf.h"
 
+
 static int loadseg(pde_t *pgdir, uint64 addr, struct inode *ip, uint offset, uint sz);
 
 int

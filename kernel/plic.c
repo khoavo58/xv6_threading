@@ -4,9 +4,9 @@
 #include "riscv.h"
 #include "defs.h"
 
-//
+//  
 // the riscv Platform Level Interrupt Controller (PLIC).
-//
+// 
 
 void
 plicinit(void)

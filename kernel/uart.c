@@ -24,7 +24,7 @@
 #define IER 1 // interrupt enable register
 #define FCR 2 // FIFO control register
 #define ISR 2 // interrupt status register
-#define LCR 3 // line control register
+#define LCR 3 // line control register 
 #define LSR 5 // line status register
 
 #define ReadReg(reg) (*(Reg(reg)))
