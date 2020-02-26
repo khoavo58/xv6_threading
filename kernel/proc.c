@@ -672,10 +672,30 @@ procdump(void)
   }
 }
 
-int clone(void(*)(void*), void *arg1, void *arg2, void *stack)
+int clone(void(*fcn)(void*, void*), void* arg1, void* arg2, void* stack)
 {
+    int i, pid;
+    struct proc* np;
+    struct proc* p = myproc();
+
+    //checking if stack pointer is in range
+    if (((uint)stack % PGSIZE) != 0){
+        return -1;
+    }
+
+    //checking if stack is within PGSIZE
+    if ((proc->sz - (uint)stack) < PGSIZE) {
+        return -1;
+    }
+
+    // Allocate process.
+    if ((np = allocproc()) == 0) {
+        return -1;
+    }
+
     return 0;
 }
+
 
 int join(void** stack)
 {
