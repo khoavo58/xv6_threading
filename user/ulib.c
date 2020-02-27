@@ -123,7 +123,7 @@ memmove(void* vdst, const void* vsrc, int n)
     return vdst;
 }
 
-int thread_create(void (*start_routine)(void*)) {
+int thread_create(void (*start_routine)()) {
 
     void* stack = malloc(PGSIZE);
     int creturn = clone(start_routine, stack);
