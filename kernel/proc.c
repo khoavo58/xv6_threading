@@ -672,7 +672,12 @@ procdump(void)
   }
 }
 
-int clone(void(*fcn)(void*, void*), void* arg1, void* arg2, void* stack)
+int clone(void*, int)
+{
+    return 0;
+}
+
+/*int clone(void(*fcn)(void*, void*), void* arg1, void* arg2, void* stack)
 {
     int i, pid;
     struct proc* np;
@@ -695,7 +700,7 @@ int clone(void(*fcn)(void*, void*), void* arg1, void* arg2, void* stack)
 
     return 0;
 }
-
+*/
 
 int join(void** stack)
 {
